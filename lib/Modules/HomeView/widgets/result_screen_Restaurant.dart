@@ -9,7 +9,7 @@ class ResultScreenRestaurant extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).backgroundColor,
-      body:const ResultScreenRestaurantBody() ,
+      body: ResultScreenRestaurantBody() ,
     );
   }
 }

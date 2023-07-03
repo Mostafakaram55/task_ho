@@ -9,8 +9,17 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'baseList.dart';
 
-class ResultScreenRestaurantBody extends StatelessWidget {
-  const ResultScreenRestaurantBody({Key? key}) : super(key: key);
+class ResultScreenRestaurantBody extends StatefulWidget {
+   ResultScreenRestaurantBody({Key? key}) : super(key: key);
+
+  @override
+  State<ResultScreenRestaurantBody> createState() => _ResultScreenRestaurantBodyState();
+}
+
+class _ResultScreenRestaurantBodyState extends State<ResultScreenRestaurantBody> {
+  final List<String>  numberChairs=['1','2','3','4','5'];
+
+  String? numChairs='1';
 
   @override
   Widget build(BuildContext context) {
@@ -164,6 +173,51 @@ class ResultScreenRestaurantBody extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: AppSize.s10.h,),
+                Row(
+                  children: [
+                    Container(
+                      width: 150.w,
+                      height: 40.h,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10.sp),
+                        color: Colors.grey,
+                      ),
+                      child:  Center(
+                        child: DropdownButton<String>(
+                          items: numberChairs.map((e) => DropdownMenuItem(
+                            value: e,
+                            child:  Text(e,style: TextStyle(
+                              color: Theme.of(context).disabledColor,
+                              fontWeight: FontWeight.bold,
+                              fontSize: AppSize.s20,
+                            ),),
+                          )).toList(),
+                          onChanged: (value){
+                            setState(() {
+                              numChairs=value!;
+                            });
+                          },
+                          value: numChairs,
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      width: 40.w,
+                    ),
+                    Container(
+                      width: 150.w,
+                      height: 40.h,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10.sp),
+                        color: Colors.grey,
+                      ),
+                      child:Icon(
+                        Icons.timer
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: AppSize.s10.h,),
                 InkWell(
                   onTap: (){
                     //Event...
@@ -212,5 +266,4 @@ class ResultScreenRestaurantBody extends StatelessWidget {
       ],
     );
   }
-
 }
