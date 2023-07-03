@@ -1,6 +1,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:task_ho/Modules/HomeView/widgets/stayaing_most_popular_list.dart';
 import 'package:task_ho/core/Manager/App_size.dart';
 import 'package:task_ho/core/Manager/assets_manager.dart';
 import 'package:task_ho/core/icons.dart';
@@ -170,7 +171,7 @@ class _StayingViewBodyState extends State<StayingViewBody> {
           ),
         ),
         const SliverToBoxAdapter(
-          child: MostPopularList(),
+          child: StayingMostPopularList(),
         ),
       ],
     );

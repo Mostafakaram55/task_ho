@@ -1,26 +1,24 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:task_ho/core/Manager/App_size.dart';
-import 'package:task_ho/core/Manager/Color_Manager.dart';
-import 'package:task_ho/core/icons.dart';
-import 'package:task_ho/core/Manager/App_size.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../core/Manager/App_size.dart';
+import '../../../core/Manager/Color_Manager.dart';
+import '../../../core/icons.dart';
+import 'best_styaing_list.dart';
 import 'baseList.dart';
 
-class ResultScreenRestaurantBody extends StatefulWidget {
-   ResultScreenRestaurantBody({Key? key}) : super(key: key);
+class BookHotelStayingBody extends StatefulWidget {
+   BookHotelStayingBody({Key? key}) : super(key: key);
 
   @override
-  State<ResultScreenRestaurantBody> createState() => _ResultScreenRestaurantBodyState();
+  State<BookHotelStayingBody> createState() => _BookHotelStayingBodyState();
 }
 
-class _ResultScreenRestaurantBodyState extends State<ResultScreenRestaurantBody> {
-  final List<String>  numberChairs=['1','2','3','4','5'];
+class _BookHotelStayingBodyState extends State<BookHotelStayingBody> {
+  final List<String>  numberPersons=['1','2','3','4','5'];
 
-  String? numChairs='1';
-
+  String? numPerson='1';
   @override
   Widget build(BuildContext context) {
     return CustomScrollView(
@@ -42,18 +40,18 @@ class _ResultScreenRestaurantBodyState extends State<ResultScreenRestaurantBody>
                       color: Theme.of(context).disabledColor,
                     )),
                     Text(
-                        'Premier Le Reve Hotel & Spa',
+                      'Premier Le Reve Hotel & Spa',
                       style: TextStyle(
-                        color: Theme.of(context).disabledColor,
-                        fontWeight: FontWeight.bold,
-                        fontSize: AppSize.s18.sp
+                          color: Theme.of(context).disabledColor,
+                          fontWeight: FontWeight.bold,
+                          fontSize: AppSize.s18.sp
                       ),
                     )
                   ],
                 ),
               ),
               Image.network(
-                  'https://cdn.al-ain.com/lg/images/2018/3/29/121-183325-21-exciting-restaurants-world_700x400.jpeg',
+                'https://cf.bstatic.com/xdata/images/hotel/max500/301942680.jpg?k=67f5abe85bb847ca46eb3f0b42614be2df8135524b75a6fe7a10e61d99b4c5d2&o=',
                 width: double.infinity,
                 height: 200.h,
                 fit: BoxFit.cover,
@@ -76,10 +74,10 @@ class _ResultScreenRestaurantBodyState extends State<ResultScreenRestaurantBody>
                       color:ColorManager.buttonColor,
                     ),
                     Text(
-                        'location',
+                      'location',
                       style: TextStyle(
-                        color: Theme.of(context).disabledColor,
-                        fontSize: AppSize.s20
+                          color: Theme.of(context).disabledColor,
+                          fontSize: AppSize.s20
                       ),
                     )
                   ],
@@ -88,12 +86,12 @@ class _ResultScreenRestaurantBodyState extends State<ResultScreenRestaurantBody>
                 Row(
                   children: [
                     Icon(
-                      Icons.menu_book,
+                      Icons.public,
                       size: AppSize.s22.sp,
                       color:ColorManager.buttonColor,
                     ),
                     Text(
-                      'Menu',
+                      'Visit Hotel website',
                       style: TextStyle(
                           color: Theme.of(context).disabledColor,
                           fontSize: AppSize.s20
@@ -119,58 +117,37 @@ class _ResultScreenRestaurantBodyState extends State<ResultScreenRestaurantBody>
                   ],
                 ),
                 SizedBox(height: AppSize.s20.h,),
-                Text(
-                    'Details',
-                  style: TextStyle(
-                    color: Theme.of(context).disabledColor,
-                    fontWeight: FontWeight.bold,
-                    fontSize: AppSize.s20
-                  ),
+                Row(
+                  children: [
+                    Text(
+                      'About',
+                      style: TextStyle(
+                          color: Theme.of(context).disabledColor,
+                          fontWeight: FontWeight.bold,
+                          fontSize: AppSize.s20
+                      ),
+                    ),
+                    const Spacer(),
+                    Text(
+                      '98\$/Night',
+                      style: TextStyle(
+                          color: Theme.of(context).disabledColor,
+                          fontWeight: FontWeight.bold,
+                          fontSize: AppSize.s20
+                      ),
+                    ),
+                  ],
                 ),
                 const Divider(),
                 SizedBox(height: AppSize.s10.h,),
                 Text(
-                    'CUISINES',
+                  'Opening our doors for the first time in 2009, we have strived to become Luxury Adult Only Resort who is providing upscale hospitality from the heart. Through authenticity and care, we created unique memorable experiences for our guests that will be treasured for a lifetime. Over the past decade we have became destination of choice to our guests and will continue to do so for years to come. Our secret lays in our incredible team who put the soul in hospitality every day. The needs of our guests are in the forefront of everything we do. Located in Sahl Hasheesh on Egypt Red Sea coast, an area made internationally famous by the combination of its clear skies',
                   style: TextStyle(
                     color: Theme.of(context).disabledColor,
-                    fontSize: AppSize.s18.sp,
-                    fontWeight: FontWeight.bold,
+                    fontSize: AppSize.s16.sp,
+                    fontWeight: FontWeight.w400,
                   ),
 
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                      'Middle Eastern, Egyptian, Barbecue, Arabic',
-                    style: TextStyle(
-                      color: Theme.of(context).disabledColor,
-                      fontSize: AppSize.s16.sp,
-                      fontWeight: FontWeight.w500,
-                    ),
-
-                  ),
-                ),
-                SizedBox(height: AppSize.s4.h,),
-                Text(
-                  'Special Diets',
-                  style: TextStyle(
-                    color: Theme.of(context).disabledColor,
-                    fontSize: AppSize.s18.sp,
-                    fontWeight: FontWeight.bold,
-                  ),
-
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    'Vegetarian Friendly, Vegan Options, Halal, Gluten Free Options',
-                    style: TextStyle(
-                      color: Theme.of(context).disabledColor,
-                      fontSize: AppSize.s16.sp,
-                      fontWeight: FontWeight.w500,
-                    ),
-
-                  ),
                 ),
                 SizedBox(height: AppSize.s10.h,),
                 Row(
@@ -182,24 +159,7 @@ class _ResultScreenRestaurantBodyState extends State<ResultScreenRestaurantBody>
                         borderRadius: BorderRadius.circular(10.sp),
                         color: Colors.grey,
                       ),
-                      child:  Center(
-                        child: DropdownButton<String>(
-                          items: numberChairs.map((e) => DropdownMenuItem(
-                            value: e,
-                            child:  Text(e,style: TextStyle(
-                              color: Theme.of(context).disabledColor,
-                              fontWeight: FontWeight.bold,
-                              fontSize: AppSize.s20,
-                            ),),
-                          )).toList(),
-                          onChanged: (value){
-                            setState(() {
-                              numChairs=value!;
-                            });
-                          },
-                          value: numChairs,
-                        ),
-                      ),
+                      child:const  Center(child:  Text('Check in'))
                     ),
                     SizedBox(
                       width: 40.w,
@@ -211,24 +171,42 @@ class _ResultScreenRestaurantBodyState extends State<ResultScreenRestaurantBody>
                         borderRadius: BorderRadius.circular(10.sp),
                         color: Colors.grey,
                       ),
-                      child:const Center(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                                'Time',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold
-                              ),
-                            ),
-                            Icon(
-                              Icons.timer
-                            ),
-                          ],
-                        ),
-                      ),
+                      child:Center(child: Text('Check Out'))
                     ),
                   ],
+                ),
+                SizedBox(height: AppSize.s10.h,),
+                Center(
+                  child: Container(
+                      width: 150.w,
+                      height: 40.h,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10.sp),
+                        color: Colors.grey,
+                      ),
+                      child:Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const Text(' Guests'),
+                          DropdownButton<String>(
+                            items: numberPersons.map((e) => DropdownMenuItem(
+                              value: e,
+                              child:  Text(e,style: TextStyle(
+                                color: Theme.of(context).disabledColor,
+                                fontWeight: FontWeight.bold,
+                                fontSize: AppSize.s20,
+                              ),),
+                            )).toList(),
+                            onChanged: (value){
+                              setState(() {
+                                numPerson=value!;
+                              });
+                            },
+                            value: numPerson,
+                          ),
+                        ],
+                      ),
+                  ),
                 ),
                 SizedBox(height: AppSize.s10.h,),
                 InkWell(
@@ -240,20 +218,20 @@ class _ResultScreenRestaurantBodyState extends State<ResultScreenRestaurantBody>
                       width: 130.w,
                       height: 40.h,
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(AppSize.s20),
-                        color: ColorManager.buttonColor
+                          borderRadius: BorderRadius.circular(AppSize.s20),
+                          color: ColorManager.buttonColor
                       ),
-                       child: Center(
-                         child: Text(
-                           textAlign: TextAlign.center,
-                             'Book now',
-                           style: TextStyle(
-                             color: Colors.white,
-                             fontWeight: FontWeight.bold,
-                             fontSize: AppSize.s18.sp
-                           ),
-                         ),
-                       ),
+                      child: Center(
+                        child: Text(
+                          textAlign: TextAlign.center,
+                          'Book now',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: AppSize.s18.sp
+                          ),
+                        ),
+                      ),
                     ),
                   ),
                 ),
@@ -268,13 +246,12 @@ class _ResultScreenRestaurantBodyState extends State<ResultScreenRestaurantBody>
 
                 ),
                 SizedBox(height: AppSize.s10.h,),
-
               ],
             ),
           ),
         ),
         const SliverToBoxAdapter(
-          child: BaseList(),
+          child: BestStayingList(),
         ),
       ],
     );

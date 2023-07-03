@@ -7,6 +7,7 @@ import 'package:task_ho/core/Manager/App_size.dart';
 import 'package:task_ho/core/Manager/assets_manager.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'Trips/Trips_view.dart';
 import 'custom_filed.dart';
 import 'custom_pest_list.dart';
 
@@ -53,9 +54,14 @@ class HomeBody extends StatelessWidget {
                 SizedBox(height: 40.w,),
                 Row(
                    children: [
-                     CustomFiled(
-                       image: AssetData.trips,
-                       name: 'trips',
+                     InkWell(
+                       onTap: (){
+                         Navigator.push(context, MaterialPageRoute(builder: (_)=>Tips()));
+                       },
+                       child: CustomFiled(
+                         image: AssetData.trips,
+                         name: 'trips',
+                       ),
                      ),
                      SizedBox(width: 70.w,),
                      CustomFiled(

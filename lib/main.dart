@@ -10,6 +10,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:task_ho/core/Theme/theme_dark.dart';
 
 import 'Modules/HomeView/widgets/Trips/Tips_resulte.dart';
+import 'Modules/HomeView/widgets/Trips/Trips_view.dart';
+import 'Modules/HomeView/widgets/book_hotel_staying.dart';
 import 'Modules/logIn_view/login_view.dart';
 import 'core/Manager/route_manager.dart';
 import 'core/Theme/theme_llight.dart';
@@ -36,7 +38,7 @@ class MyApp extends StatelessWidget {
                 onGenerateRoute: RouteGenerator.getRout,
                 debugShowCheckedModeBanner: false,
                 theme:  getThemeDataLight(),
-                //home: const TipsRuselte(),
+               // home: const Tips(),
               );
             },
           ),
